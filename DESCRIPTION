@@ -1,0 +1,10 @@
+Package: bigbetaR
+Type: Package
+Title: Dimensions of Betadiversity
+Version: 1.0
+Date: 2014-05-05
+Author: Ben Weinstein
+Maintainer: Ben Weinstein <bweinste@life.bio.sunysb.edu>
+Description: Computes taxonomic, phylogenetic and trait betadiversity for grid
+    cells
+License: GPL-2
