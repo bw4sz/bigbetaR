@@ -7,6 +7,7 @@ lappend <- function(lst, obj) {
 
 #' Get species list from cell number
 #' @param commID The community ID from the list matrix
+#' @export
 Getsplist<-function(commID){
   names(siteXspp[commID,which(siteXspp[commID,]==1)])
 }
@@ -17,6 +18,7 @@ Getsplist<-function(commID){
 #' @seealso picante::mpd
 #' @param phyl a phylo object: phylogenetic tree holding species in the community
 #' @param com a community matrix with sites as rows and species as columns 
+#' @export 
 matpsim <- function(phyl, com) # make sure nodes are labelled and that com and phyl species match
 {
   
