@@ -11,17 +11,10 @@ betaPar.scatter<-function(toScatterMatrix,toScatterIndex,coph,traits){
     
   print(paste("Number of within loop calls:", ncol(toScatterIndex)))
   
-  #Within a chunk, loop through the indexes and compute betadiversity
-  holder<-apply(toScatterIndex,2,function(x) {
-    #get the comm row
-    comm.d<-toScatterMatrix[c(x[1],x[2]),]
-    out<-beta_all(comm=comm.d,traits=traits,coph=coph)
-    return(out)
-  }
-  )
-  
-  #bind to a dataframe
-  holder<-melt(holder)
-  
+  #get species lists
+  comm<-as.matrix(comm) #needs to be checked for rownames
+
+  out<-beta_all(comm=comm.df[1:10,],traitdist,coph=coph)
+
   return(holder)
 }

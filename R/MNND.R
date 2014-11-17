@@ -10,7 +10,6 @@
 
 MNND <- function(A,B,sp.list,dists)
 {
-  
   Asp     <- sp.list[[A]]
   Bsp     <- sp.list[[B]]
   compmat <- dists[Asp,Bsp]

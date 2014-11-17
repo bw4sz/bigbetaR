@@ -7,4 +7,9 @@
 taxF<-function(comm){
 d<-betapart.core(comm)
 bsim<-d$min.not.shared/(d$min.not.shared + d$shared)
-bsim[2]}
+rownames(bsim)<-rownames(comm)
+colnames(bsim)<-rownames(comm)
+bsim<-melt(bsim)
+colnames(bsim)<-c("To","From","Tax")
+return(bsim)
+}
