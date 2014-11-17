@@ -7,14 +7,14 @@
 
 #' @export 
 
-betaPar.scatter<-function(toScatterMatrix,toScatterIndex,coph,traits){
+betaPar.scatter<-function(toScatterMatrix,toScatterIndex,coph,traitdist){
     
   print(paste("Number of within loop calls:", ncol(toScatterIndex)))
   
   #get species lists
   comm<-as.matrix(comm) #needs to be checked for rownames
 
-  out<-beta_all(comm=comm.df[1:10,],traitdist,coph=coph)
+  system.time(out<-beta_all(comm=toScatterMatrix,traitdist,coph=coph))
 
   return(holder)
 }

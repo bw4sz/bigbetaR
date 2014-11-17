@@ -34,13 +34,8 @@ beta_all<-function(comm,traitdist,coph){
   trait<-MNTDt(comm=comm.trait,dists=traitdist,sp.list=sp.list.trait,nam="Trait")
   
   #merge together
-  merge1<-merge(tax,phylo,by=c("To","From"))
-  merge2<-merge(merge1,trait,by=c("To","From"))
-  
-  Allmetrics<-melt(allm,id.var=c("To","From"))
-  
-  #cast into desired angle
-  Allmetrics<-dcast(Allmetrics,To+From~variable)
+  merge1<-merge(phylo,tax,by=c("To","From"))
+  Allmetrics<-merge(merge1,trait,by=c("To","From"))
   
   #Combine with other metrics into one large dataframe
   return(Allmetrics)}
