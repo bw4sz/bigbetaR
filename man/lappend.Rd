@@ -5,7 +5,12 @@
 \usage{
 lappend(lst, obj)
 }
+\arguments{
+\item{lst}{list}
+
+\item{obj}{object to be appended}
+}
 \description{
-Append a position to a list
+adds a a new list position with object without nesting.
 }
 
